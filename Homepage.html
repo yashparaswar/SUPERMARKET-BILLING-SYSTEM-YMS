@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate bill</title>
+    <style>
+        
+          body{
+       padding:25px;
+       background-color: rgb(113, 184, 245);
+   }
+   
+   input:focus{
+        outline: none;
+    }
+    
+    form{
+        width: 35%;
+        margin-left:auto;
+        margin-right:auto;
+        padding:50px;
+        background:rgb(121, 155, 248);
+        border-radius:5px;
+        position:relative;
+        font-family: 'Libre Franklin', sans-serif;
+    }
+
+    form > div {
+        float:left;margin-bottom:30px;
+    }
+    form > div > p{
+        font-size: 12px;margin-bottom: 3px;
+    }
+    form > div > input{
+        font-size:12px;letter-spacing:1px;padding:  5px;border: 0;background:  rgb(251, 245, 245);border-bottom: 1px solid silver;width: 100%;color: gray;
+    }
+
+    form > p:last-of-type{
+        text-align: center;padding-top: 50px;display:  table;width: 100%;color:rgb(22, 21, 21);
+    }
+
+    form > p:last-of-type > a{
+        cursor:pointer;border:0;
+        /* text-decoration-color: bisque; */
+        padding: 10px 25px;
+        background:  rgb(246, 241, 241);
+        border-radius:  28px;
+        font-size: 12px; 
+    }
+
+    .term{
+        padding-top:40px;display: flex;width:  100%;align-items:  center;
+    }
+
+    .term > i{
+        cursor:pointer;width:20px;
+    }
+
+    .term > span{
+        font-size:12px;
+    }
+
+    /* delete */
+    form > a:last-of-type{
+        position:absolute;
+        bottom: 10px;
+        right: 15px;
+        font-size:  10px;
+        letter-spacing:  1px;
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<div style="display:flex;width:100%;">
+    <form method="post" action="login">
+        <div style="width:100%;">
+            Date Of Bill: <input type = "date", name="txtdate">
+        </div>
+        <div style="width:100%;">
+            <p>FULL NAME</p>
+            <input name="name" autofocus,name="txtname">
+        </div>
+        
+
+        <div style="width:47%;">
+            <p>Phone Number</p>
+            <input name="Enter Number",name="txtnumber">
+        </div>
+        
+
+        
+        <p>
+            <a>GENERATE BILL</a>
+        </p>
+        
+    </form> 
+</div>
+<script>
+       $(document).ready(function(){
+        
+        //-- Click on terms and conditions
+        $(".term").click(function(){
+            var ctrl = $(this).find("i");
+            if (ctrl.hasClass("fa-check-square-o")){
+                ctrl.attr("class","fa fa-square-o");
+            }else{
+                ctrl.attr("class", "fa fa-check-square-o");
+            }
+        }) 
+
+        $("input").blur(function(){
+            if ($(this).val() != ""){
+                $(this).parent().css({"color":"black"});
+                $(this).css({"border-bottom":"1px solid silver","color":"gray"});                 
+            }
+        })
+        
+        //--- CONTINUE ---
+        $("form > p > a").click(function(){
+            //-- Detect terms and conditions
+            var term = false;
+            if ($(".term > i").hasClass('fa-check-square-o')){
+                term = true;
+            }
+            
+            //-- only example
+            var user = {};
+            user.name = $("input[name='name']").val();
+            user.id = $("input[name='id']").val();
+            user.phone = $("input[name='phone']").val();
+            user.email = $("input[name='email']").val();
+            user.term = term;
+
+            //-- Validator            
+            $("input").each(function(e, valor){
+                var error = false;
+                if ($(this).val() == ""){
+                    error = true;
+                }
+                if (error === true){
+                    //-- with errors
+                    $(this).parent().css({"color":"red"});
+                    $(this).css({"border-bottom":"1px solid red"});
+                }else{
+                    //-- without errors
+                    $(this).parent().css({"color":"black"});
+                    $(this).css({"border-bottom":"1px solid silver","color":"gray"}); 
+                }
+            })
+
+            //-- msg example
+            $("body").append(JSON.stringify(user) + "<br>");
+        })
+    })
+
+</script>
+</body>
+</html>

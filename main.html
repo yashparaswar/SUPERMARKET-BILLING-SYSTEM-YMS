@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"
+        integrity=
+"sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"
+        integrity=
+"sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA=="
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+    <!-- for styling -->
+<meta charset="ISO-8859-1">
+<title>Generate Bill</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+ <style>
+        
+  
+       
+    </style>
+</head>
+<body class ="container-fluid">
+<div class ="card" style ="width:600px; margin:auto;" >
+<h2 class ="bg-#7c99f0 card.header">Customer Bill</h2>
+ <form class ="form" action="EmpDao" method="post">
+ <table class ="table table-hover" >
+ 
+ <tr>
+ <td>Bill No</td>
+<td>
+ <select input type="text" name="bill_no" >
+ <option value="" selected="selected">Bill.No</option>
+ <option value="1">1</option>
+ <option value="2">2</option>
+ <option value="3">3</option>
+ <option value="4">4</option>
+ <option value="5">5</option>
+ <option value="6">6</option>
+ <option value="7">7</option>
+ <option value="8">8</option>
+ <option value="9">9</option>
+ <option value="10">10</option>
+ <option value="11">11</option>
+ <option value="12">12</option>
+ <option value="13">13</option>
+ <option value="14">14</option>
+ <option value="15">15</option>
+ <option value="16">16</option>
+ <option value="17">17</option>
+ <option value="18">18</option>
+ <option value="19">19</option>
+ <option value="20">20</option>
+ 
+ 
+ </select>
+ </td>
+ </tr>
+ 
+ 
+ 
+ 
+  <tr>
+ <td>Product ID</td>
+ <td><input type="text" name="product_id"></td>
+ </tr>
+ 
+ <tr>
+ <td>Product Name</td>
+ <td>
+ <select input type ="text" name="product_name">
+ <option value ="" selected="selected">Product Name</option>
+ 
+ 
+ <option value="Apple"> Apple</option>
+ <option value="Banana">Banana </option>
+ 
+
+ <option value="Grapes">Grapes</option>
+ 
+  <option value="Jack Fruit">Jack Fruit</option>
+  
+  
+   <option value="Mango">Mango</option>
+   
+    
+    <option value="Orange">Oranges</option>
+    
+     
+     <option value="Papaya">Papaya</option>
+     
+      
+      <option value="Pomegranate">Pomegranate</option>
+      
+      
+       <option value="Watermelon">Watermelon</option>
+       
+        
+        <option value="Pineapple">Pineapple</option>
+        
+         
+         <option value="Onion">Onion</option>
+         
+          
+          <option value="Potato">Potato</a></li>
+           
+           <option value="Carrot">Carrot</a></li>
+            
+            <option value="Tomato">Tomato</a></li>
+             
+             <option value="Chilles">Chilles</a></li>
+              
+              <option value="Ladyfinger">Ladyfinger</a></li>
+               
+               <option value="Beans">Beans</a></li>
+                
+                <option value="Cucumber">Cucumber </a></li>
+                
+                 <option value="coriander Leaves">Coriander Leaves</a></li>
+                  
+                  <option value="Brinjal">Brinjal</a></li>
+                   
+                   <option value="Curry Leaves">Curry Leaves </a></li>
+                   
+                    <option value="Cabbage">Cabbage </a></li>
+                    
+                     <option value="Capsicum">Capsicum</a></li>
+                      
+                      <option value="Meat& Sea">Meat& Sea</a></li>
+                      
+                       <option value="King Fish">King Fish</a></li>
+                        
+                        <option value="Tuna">Tuna</a></li>
+                         
+                         <option value="Chicken (Boneless)">Chicken (Boneless)</a></li>
+                          
+              <option value="Chicken (skinless)">Chicken (skinless)</a></li>
+              
+                           <option value="Chicken(skin)">Chicken(skin)</a></li>
+                           
+                            <option value="Prawns">Prawns</a></li>
+                             
+                             <option value="Meat">Meat</a></li>
+                             
+                              <option value="Eggs (1 dozen)">Eggs (1 dozen)</a></li>
+                              
+                               <option value="Crabs">Crabs</a></li>
+                               
+                                <option value="Spices per 100g">Spices per 100g</a></li>
+                                
+                                 <option value="Cinnamons">Cinnamons</a></li>
+                                  
+                                  <option value="Turmeric Powder">Turmeric Powder</a></li>
+                                   
+                                   <option value="Bay Leaf">Bay Leaf </a></li>
+                                   
+                                    <option value="Dry Ginger">Dry Ginger </a></li>
+                                    
+
+                                  <option value="Cumin Seeds">Cumin Seeds</a></li>
+                                  
+                                      <option value="Fennel Seeds">Fennel Seeds</a></li>
+                                      
+                                     <option value="Black Pepper">Black Pepper</a></li>
+                                     
+                                      <option value="White Pepper">White Pepper</a></li>
+                                      
+                                       <option value="Nutmeg">Nutmeg</a></li>
+                                        
+ <option value="Mustard">Mustard </a></li>
+ 
+  <option value="Kasuri Methi">Kasuri Methi</a></li>
+   
+
+   <option value="Flax Seeds">Flax Seeds</a></li>
+    
+    <option value="Chilli powder ">Chilli powder </a></li>
+    
+     <option value="Dry Fruit">Dry Fruit</a></li>
+     
+     <option value="Almonds">Almonds</a></li>
+       
+
+ <option value="Cashew Nuts">Cashew Nuts</a></li>
+ 
+            <option value="Blueberry">Blueberry</a></li>
+            
+    <option value="Green Raisins">Green Raisins</a></li>
+    
+<option value="Mixed Dry Fruits">Mixed Dry Fruits</a></li>
+
+<option value="Dry Anjeer ">Dry Anjeer</a></li>
+
+<option value="Pista ">Pista </a></li>
+<option value="Walnut">Walnut </a></li>
+
+<option value="Flour Per 5kg">Flour Per 5kg</a></li>
+
+<option value="Wheat(Ashrivad)">Wheat(Ashrivad) </a></li>
+
+<option value="Jawar">Jawar</a></li>
+ 
+<option value="Ragi">Ragi </a></li>
+
+<option value="Cornflower">Cornflower</a></li>
+ 
+<option value="Besana Flour">Besana Flour</a></li>
+ 
+<option value="Rice Flour">Rice Flour</a></li>
+ 
+<option value="Oils">Oils</a></li>
+
+<option value="Sunflower Oil(Gemini Refined)">Sunflower Oil(Gemini Refined)</a></li>
+ 
+<option value="Soya Bean Oil">Soya Bean Oil</a></li>
+ 
+<option value="GroundNut Oil">GroundNut Oil </a></li>
+
+<option value="Coconut Oil">Coconut Oil</a></li>
+ 
+<option value="Mustard Oil">Mustard Oil </a></li>
+
+<option value="Olive Oil">Olive Oil</a></li>
+ 
+<option value="Dairy Products Bakery Per Packet">Dairy Products Bakery Per Packet</a></li>
+
+<option value="Milk(500ml)">Milk(500ml)</a></li>
+ 
+<option value="Butter">Butter</a></li>
+
+<option value="Cheese">Cheese</a></li>
+ 
+<option value="Panner(500g)">Panner(500g)</a></li>
+ 
+<option value="Yogurt">Yogurt </a></li>
+
+<option value="Flavoured Milk">Flavoured Milk</a></li>
+ 
+<option value="Bread">Bread</a></li>
+ 
+<option value="Toast">Toast</a></li>
+ 
+<option value="Rusk">Rusk </a></li>
+
+<option value="Milk Powder">Milk Powder</a></li>
+ 
+<option value="Brown Bread">Brown Bread </a></li>
+
+<option value="CupCakes">CupCakes </a></li>
+
+<option value="Household & Cleaning">Household & Cleaning</a></li>
+
+<option value="Mop">Mop</a></li>
+ 
+<option value="Vaccum">Vaccum</a></li>
+ 
+<option value="Broom">Broom</a></li>
+ 
+<option value="Rin Soap">Rin Soap </a></li>
+
+<option value="Detergent-Tide">Detergent-Tide</a></li>
+ 
+<option value="Vim per Bar">Vim per Bar </a></li>
+
+<option value="Dettol">Dettol </a></li>
+
+<option value="Handwash">Handwash</a></li>
+ 
+<option value="Phenol">Phenol</a></li>
+
+<option value="Carpet Brushes">Carpet Brushes</a></li>
+ <option value="Buckets">Buckets</a></li>
+
+<option value="Colin">Colin</a></li>
+
+<option value="Washing Machine Liquid">Washing Machine Liquid</a></li>
+
+<option value="Napkins">Napkins</a></li>
+
+<option value="Gloves ">Gloves</a></li>
+
+<option value="Tissue Paper">Tissue Paper</a></li>
+
+<option value="Tooth Brush">Tooth Brush</a></li>
+
+<option value="Comb">Comb</a></li>
+
+<option value="Toothpaste">Toothpaste</a></li>
+
+<option value="Junk Food">Junk Food</a></li>
+
+<option value="Kurkure">Kurkure </a></li>
+
+<option value="Maggie">Maggie</a></li>
+
+<option value="Yippey">Yippey</a></li>
+
+<option value="Pizza Base">Pizza Base</a></li>
+ 
+<option value="Biscuits">Biscuits</a></li>
+
+<option value="Lays">Lays</a></li>
+
+<option value="Aloo Bujiya">Aloo Bujiya</a></li>
+
+<option value="Dairy Milk">Dairy Milk</a></li>
+
+<option value="Crispello">Crispello</a></li>
+
+<option value="MilkyBar">MilkyBar</a></li>
+
+<option value="Perk">Perk </a></li>
+
+<option value="KitKat">KitKat </a></li>
+
+<option value="Ferrero Rocher">Ferrero Rocher </a></li>
+<option value="Protein Bar">Protein Bar </a></li>
+
+<option value="Soya Chunks">Soya Chunks </a></li>
+
+<option value="Gems">Gems </a></li>
+
+<option value="5 Star">5 Star </a></li>
+
+<option value="Cookies(per packet)">Cookies(per packet)</a></li>
+ 
+<option value="Dark Chocolate">Dark Chocolate </a></li>
+
+<option value="White Chocolate">White Chocolate </a></li>
+
+<option value="Soft& Cold Drinks">Soft& Cold Drinks </a></li>
+
+<option value="Mazza">Mazza </a></li>
+
+<option value="Thums Up">Thums Up </a></li>
+
+<option value="Coca Cola">Coca Cola </a></li>
+
+<option value="Water 1 l ">Water 1 l </a></li>
+
+<option value="Pepsi Can">Pepsi Can </a></li>
+
+<option value="Diet Coke">Diet Coke </a></li>
+
+<option value="Mountain Dew ">Mountain Dew </a></li>
+
+<option value="Appy">Appy </a></li>
+
+<option value="Dr Pepper">Dr Pepper </a></li>
+
+<option value="Mirinda">Mirinda </a></li>
+
+<option value="7up Can">7up Can </a></li>
+
+<option value="Sprite">Sprite </a></li>
+
+<option value="Sting">Sting </a></li>
+
+<option value="Red Bull">Red Bull </a></li>
+
+<option value="Monster">Monster </a></li>
+
+<option value="Slice">Slice </a></li>
+
+<option value="Limca">Limca</a></li>
+
+<option value="Makeover">Makeover</a></li>
+
+<option value="Fair and lovely">Fair and lovely </a></li>
+
+<option value="Ponds Powder">Ponds Powder </a></li>
+
+<option value="Fair and Handsome">Fair and Handsome </a></li>
+
+<option value="Nivea Cream">Nivea Cream </a></li>
+
+<option value="Sun Cream spf 30">Sun Cream spf 30 </a></li>
+
+<option value="Axe Perfume">Axe Perfume </a></li>
+
+<option value="Park Avenue">Park Avenue </a></li>
+
+<option value="Face Wash Male- Garine">Face Wash Male- Gariner</a></li>
+
+<option value="Face Wash Female-Garnier">Face Wash Female-Garnier </a></li>
+
+<option value="Fogg ">Fogg </a></li>
+
+<option value="Wotta Girl">Wotta Girl </a></li>
+
+<option value="Lipbalm Niviea">Lipbalm Niviea </a></li>
+
+<option value="Kajal">Kajal </a></li>
+
+<option value="Makeup Kit">Makeup Kit </a></li>
+
+<<option value="Hair Mask">Hair Mask </a></li>
+
+<option value="Nail Paint">Nail Paint </a></li>
+
+<option value="Alovera Gel ">Alovera Gel </a></li>
+ </select>
+ </td>
+ </tr>
+ 
+ <tr>
+ <td>Quantity</td>
+ <td><input type="text" name="quantity"></td>
+ </tr>
+  <tr>
+ <td>Price</td>
+ <td><input type="text" name="price"></td>
+ </tr>
+ 
+ 
+ 
+  
+ 
+  <tr>
+ <td>Name</td>
+ <td><input type="text" name="name"></td>
+ </tr>
+ 
+ <tr>
+ <td>phone</td>
+   <td><input type="text" name="phone_no"></td>
+ </tr>
+ 
+ 
+ <tr>        
+              <td>Total Price</td>
+            <td colspan="3"><input type="text" name="total_price" id="result"></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="c" onclick="clr()" /> </td>
+        </tr>
+        <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="1" onclick="dis('1')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="2" onclick="dis('2')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="3" onclick="dis('3')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="/" onclick="dis('/')" 
+                        onkeydown="myFunction(event)"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="dis('4')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="5" onclick="dis('5')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="6" onclick="dis('6')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="*" onclick="dis('*')" 
+                        onkeydown="myFunction(event)"> </td>
+        </tr>
+ 
+   <tr>
+            <td><input type="button" value="7" onclick="dis('7')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="8" onclick="dis('8')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="9" onclick="dis('9')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="-" onclick="dis('-')"
+                        onkeydown="myFunction(event)"> </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="dis('0')" 
+                        onkeydown="myFunction(event)"> </td>
+            <td><input type="button" value="." onclick="dis('.')" 
+                        onkeydown="myFunction(event)"> </td>
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" value="=" onclick="solve()"> </td>
+  
+            <td><input type="button" value="+" onclick="dis('+')" 
+                        onkeydown="myFunction(event)"> </td>
+        </tr>
+ 
+  
+ 
+ <tr>
+ <tr><td colspan="2"><input type="submit" value="Save Bill"/></td></tr>  
+ </tr>
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+</table>
+
+ <a href="ViewServlet">view bill</a>  
+   
+  
+</form> 
+ 
+ 
+ 
+ 
+ </div>
+  <script>
+        // Function that display value
+        function dis(val) {
+            document.getElementById("result").value += val
+        }
+  
+        function myFunction(event) {
+            if (event.key == '0' || event.key == '1' 
+                || event.key == '2' || event.key == '3'
+                || event.key == '4' || event.key == '5' 
+                || event.key == '6' || event.key == '7'
+                || event.key == '8' || event.key == '9' 
+                || event.key == '+' || event.key == '-'
+                || event.key == '*' || event.key == '/')
+                document.getElementById("result").value += event.key;
+        }
+  
+        var cal = document.getElementById("calcu");
+        cal.onkeyup = function (event) {
+            if (event.keyCode === 13) {
+                console.log("Enter");
+                let x = document.getElementById("result").value
+                console.log(x);
+                solve();
+            }
+        }
+   // Function that evaluates the digit and return result
+        function solve() {
+            let x = document.getElementById("result").value
+            let y = math.evaluate(x)
+            document.getElementById("result").value = y
+        }
+  
+        // Function that clear the display
+        function clr() {
+            document.getElementById("result").value = ""
+        }
+    </script>
+</body>
+</html>

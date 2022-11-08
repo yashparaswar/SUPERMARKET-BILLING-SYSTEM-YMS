@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>1_servlet</display-name>
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>first</servlet-name>
+  <servlet-class>com.servlets.login </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>first</servlet-name>
+  <url-pattern>/login</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>second</servlet-name>
+  <servlet-class>com.servlets.CS </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>second</servlet-name>
+  <url-pattern>/register </url-pattern> 
+  </servlet-mapping> 
+  
+   <servlet>
+  <servlet-name>sixth</servlet-name>
+  <servlet-class>com.servlets.billing </servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>sixth</servlet-name>
+  <url-pattern>/biling</url-pattern> 
+  </servlet-mapping>
+  
+   <servlet>
+  <servlet-name>seven</servlet-name>
+  <servlet-class>com.servlets.register1</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>seven</servlet-name>
+  <url-pattern>/register1</url-pattern> 
+  </servlet-mapping>
+  
+<servlet>
+  <servlet-name>fifth</servlet-name>
+  <servlet-class>com.servlets.secondservlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>fifth</servlet-name>
+  <url-pattern>/secondservlet</url-pattern> 
+  </servlet-mapping> 
+  
+<servlet>
+  <servlet-name>fourth</servlet-name>
+  <servlet-class>com.servlets.thirdservlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>fourth</servlet-name>
+  <url-pattern>/thirdservlet</url-pattern> 
+  </servlet-mapping> 
+  
+  <servlet>
+  <servlet-name>ten</servlet-name>
+  <servlet-class>com.servlets.EmpDao</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ten</servlet-name>
+  <url-pattern>/EmpDao</url-pattern> 
+  </servlet-mapping> 
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
